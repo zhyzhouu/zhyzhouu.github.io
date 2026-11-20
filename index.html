@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="academic.css">
 </head>
 <body>
   <header class="site-header">
@@ -62,7 +63,7 @@
       </div>
 
       <div class="paper-list">
-        <article class="paper">
+        <article class="paper" data-tldr="A geometry-aware time schedule improves training-free, few-step text-to-image sampling.">
           <a class="paper-thumb thumb-tors" href="https://arxiv.org/abs/2603.00763" target="_blank" rel="noreferrer" aria-label="Open TORS paper"><span class="thumb-label">TORS</span><i></i><i></i><i></i></a>
           <div class="paper-body">
             <div class="paper-meta"><span class="venue">ECCV 2026</span></div>
@@ -267,9 +268,24 @@
       }
     });
 
+    // Optional: add data-tldr="One-sentence takeaway" to any paper article.
+    document.querySelectorAll('.paper').forEach((paper) => {
+      const body = paper.querySelector('.paper-body');
+      paper.querySelectorAll('.paper-panel').forEach((panel) => paper.append(panel));
+      const takeaway = paper.dataset.tldr?.trim();
+      if (takeaway) {
+        const note = document.createElement('p');
+        note.className = 'paper-tldr';
+        const label = document.createElement('strong');
+        label.textContent = 'TL;DR';
+        note.append(label, document.createTextNode(takeaway));
+        body.querySelector('.authors').after(note);
+      }
+    });
+
     document.querySelectorAll('.panel-toggle').forEach((button) => {
       button.addEventListener('click', () => {
-        const paper = button.closest('.paper-body');
+        const paper = button.closest('.paper');
         const panel = document.getElementById(button.getAttribute('aria-controls'));
         const wasOpen = button.getAttribute('aria-expanded') === 'true';
 
