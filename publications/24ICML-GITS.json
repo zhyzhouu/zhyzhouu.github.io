@@ -1,0 +1,21 @@
+{
+  "id": "24ICML-GITS",
+  "title": "On the Trajectory Regularity of ODE-based Diffusion Sampling",
+  "authors": [
+    "Defang Chen",
+    "Zhenyu Zhou",
+    "Can Wang",
+    "Chunhua Shen",
+    "Siwei Lyu"
+  ],
+  "venue": "ICML · 2024",
+  "distinction": "",
+  "arxiv": "https://arxiv.org/abs/2405.11326",
+  "code": "https://github.com/zju-pi/diff-sampler",
+  "tldr": "",
+  "image": "assets/papers/24ICML-GITS.jpg",
+  "imageAlt": "",
+  "placeholder": "trajectory",
+  "abstract": "Diffusion-based generative models use stochastic differential equations (SDEs) and their equivalent ordinary differential equations (ODEs) to establish a smooth connection between a complex data distribution and a tractable prior distribution. In this paper, we identify several intriguing trajectory properties in the ODE-based sampling process of diffusion models. We characterize an implicit denoising trajectory and discuss its vital role in forming the coupled sampling trajectory with a strong shape regularity, regardless of the generated content. We also describe a dynamic programming-based scheme to make the time schedule in sampling better fit the underlying trajectory structure. This simple strategy requires minimal modification to any given ODE-based numerical solvers and incurs negligible computational cost, while delivering superior performance in image generation, especially in 5∼10 function evaluations.",
+  "bibtex": "@inproceedings{chen2024trajectory,\n  title = {On the Trajectory Regularity of ODE-based Diffusion Sampling},\n  author = {Chen, Defang and Zhou, Zhenyu and Wang, Can and Shen, Chunhua and Lyu, Siwei},\n  booktitle = {International Conference on Machine Learning},\n  pages = {7905--7934},\n  year = {2024},\n}"
+}

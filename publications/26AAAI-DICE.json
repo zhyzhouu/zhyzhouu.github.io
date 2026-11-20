@@ -1,0 +1,21 @@
+{
+  "id": "26AAAI-DICE",
+  "title": "DICE: Distilling Classifier-Free Guidance into Text Embeddings",
+  "authors": [
+    "Zhenyu Zhou",
+    "Defang Chen",
+    "Can Wang",
+    "Chun Chen",
+    "Siwei Lyu"
+  ],
+  "venue": "AAAI · 2026",
+  "distinction": "Oral",
+  "arxiv": "https://arxiv.org/abs/2502.03726",
+  "code": "https://github.com/zju-pi/dice",
+  "tldr": "",
+  "image": "assets/papers/26AAAI-DICE.jpg",
+  "imageAlt": "",
+  "placeholder": "dice",
+  "abstract": "Text-to-image diffusion models are capable of generating high-quality images, but suboptimal pre-trained text representations often result in these images failing to align closely with the given text prompts. Classifier-free guidance (CFG) is a popular and effective technique for improving text-image alignment in the generative process. However, CFG introduces significant computational overhead. In this paper, we present DIstilling CFG by sharpening text Embeddings (DICE) that replaces CFG in the sampling process with half the computational complexity while maintaining similar generation quality. DICE distills a CFG-based text-to-image diffusion model into a CFG-free version by refining text embeddings to replicate CFG-based directions. In this way, we avoid the computational drawbacks of CFG, enabling high-quality, well-aligned image generation at a fast sampling speed. Furthermore, examining the enhancement pattern, we identify the underlying mechanism of DICE that sharpens specific components of text embeddings to preserve semantic information while enhancing fine-grained details. Extensive experiments on multiple Stable Diffusion v1.5 variants, SDXL, and PixArt-α demonstrate the effectiveness of our method.",
+  "bibtex": "@inproceedings{zhou2026dice,\n  title={DICE: Distilling classifier-free guidance into text embeddings},\n  author={Zhou, Zhenyu and Chen, Defang and Wang, Can and Chen, Chun and Lyu, Siwei},\n  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n  volume={40},\n  number={16},\n  pages={13880--13888},\n  year={2026}\n}"
+}

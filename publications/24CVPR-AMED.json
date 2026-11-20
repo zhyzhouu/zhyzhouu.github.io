@@ -1,0 +1,20 @@
+{
+  "id": "24CVPR-AMED",
+  "title": "Fast ODE-based Sampling for Diffusion Models in Around 5 Steps",
+  "authors": [
+    "Zhenyu Zhou",
+    "Defang Chen",
+    "Can Wang",
+    "Chun Chen"
+  ],
+  "venue": "CVPR · 2024",
+  "distinction": "Highlight",
+  "arxiv": "https://arxiv.org/abs/2312.00094",
+  "code": "https://github.com/zju-pi/diff-sampler",
+  "tldr": "",
+  "image": "assets/papers/24CVPR-AMED.jpg",
+  "imageAlt": "",
+  "placeholder": "amed",
+  "abstract": "Sampling from diffusion models can be treated as solving the corresponding ordinary differential equations (ODEs), with the aim of obtaining an accurate solution with as few number of function evaluations (NFE) as possible. Recently, various fast samplers utilizing higher-order ODE solvers have emerged and achieved better performance than the initial first-order one. However, these numerical methods inherently result in certain approximation errors, which significantly degrades sample quality with extremely small NFE (e.g., around 5). In contrast, based on the geometric observation that each sampling trajectory almost lies in a two-dimensional subspace embedded in the ambient space, we propose Approximate MEan-Direction Solver (AMED-Solver) that eliminates truncation errors by directly learning the mean direction for fast diffusion sampling. Besides, our method can be easily used as a plugin to further improve existing ODE-based samplers. Extensive experiments on image synthesis with the resolution ranging from 32 to 512 demonstrate the effectiveness of our method. With only 5 NFE, we achieve 6.61 FID on CIFAR-10, 10.74 FID on ImageNet 64×64, and 13.20 FID on LSUN Bedroom.",
+  "bibtex": "@inproceedings{zhou2024fast,\n  title={Fast ode-based sampling for diffusion models in around 5 steps},\n  author={Zhou, Zhenyu and Chen, Defang and Wang, Can and Chen, Chun},\n  booktitle={2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  pages={7777--7786},\n  year={2024},\n  organization={IEEE}\n}"
+}

@@ -1,0 +1,30 @@
+{
+  "tors": {
+    "cssClass": "thumb-tors",
+    "content": "<span class=\"thumb-label\">TORS</span><i></i><i></i><i></i>"
+  },
+  "regularity": {
+    "cssClass": "thumb-regularity",
+    "content": "<span class=\"thumb-label\">GITS</span><span class=\"boomerang b1\"></span><span class=\"boomerang b2\"></span><span class=\"boomerang b3\"></span>"
+  },
+  "dice": {
+    "cssClass": "thumb-dice",
+    "content": "<span class=\"thumb-label\">DICE</span><span class=\"orb one\"></span><span class=\"orb two\"></span>"
+  },
+  "sfd": {
+    "cssClass": "thumb-sfd",
+    "content": "<span class=\"thumb-label\">SFD</span><span class=\"steps\"><b></b><b></b><b></b><b></b></span>"
+  },
+  "amed": {
+    "cssClass": "thumb-amed",
+    "content": "<span class=\"thumb-label\">AMED</span><span class=\"trajectory\"></span><span class=\"point p1\"></span><span class=\"point p2\"></span>"
+  },
+  "trajectory": {
+    "cssClass": "thumb-trajectory",
+    "content": "<span class=\"thumb-label\">GITS</span><span class=\"loop l1\"></span><span class=\"loop l2\"></span>"
+  },
+  "geometry": {
+    "cssClass": "thumb-geometry",
+    "content": "<span class=\"thumb-label\">GEOMETRY</span><span class=\"axis x\"></span><span class=\"axis y\"></span><span class=\"curve\"></span>"
+  }
+}

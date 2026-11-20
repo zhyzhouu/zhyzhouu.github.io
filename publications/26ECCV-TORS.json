@@ -1,0 +1,21 @@
+{
+  "id": "26ECCV-TORS",
+  "title": "Analyzing and Improving Fast Sampling of Text-to-Image Diffusion Models",
+  "authors": [
+    "Zhenyu Zhou",
+    "Defang Chen",
+    "Siwei Lyu",
+    "Chun Chen",
+    "Can Wang"
+  ],
+  "venue": "ECCV · 2026",
+  "distinction": "",
+  "arxiv": "https://arxiv.org/abs/2603.00763",
+  "code": "https://github.com/zju-pi/TORS",
+  "tldr": "",
+  "image": "assets/papers/26ECCV-TORS.jpg",
+  "imageAlt": "",
+  "placeholder": "tors",
+  "abstract": "Text-to-image diffusion models have achieved unprecedented success but still struggle to produce high-quality results under limited sampling budgets. Existing training-free sampling acceleration methods are typically developed independently, leaving the overall performance and compatibility among these methods unexplored. In this paper, we bridge this gap by systematically elucidating the design space, and our comprehensive experiments identify the sampling time schedule as the most pivotal factor. Inspired by the geometric properties of diffusion models revealed through the Frenet-Serret formulas, we propose constant total rotation schedule (TORS), a scheduling strategy that ensures uniform geometric variation along the sampling trajectory. TORS outperforms previous training-free acceleration methods and produces high-quality images with 10 sampling steps on Flux.1-Dev and Stable Diffusion 3.5. Extensive experiments underscore the adaptability of our method to unseen models, hyperparameters, and downstream applications.",
+  "bibtex": "@article{zhou2026analyzing,\n  title={Analyzing and Improving Fast Sampling of Text-to-Image Diffusion Models},\n  author={Zhou, Zhenyu and Chen, Defang and Lyu, Siwei and Chen, Chun and Wang, Can},\n  journal={arXiv preprint arXiv:2603.00763},\n  year={2026}\n}"
+}

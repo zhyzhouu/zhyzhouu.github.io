@@ -1,0 +1,22 @@
+{
+  "id": "23arXiv-geometric",
+  "title": "A Geometric Perspective on Diffusion Models",
+  "authors": [
+    "Defang Chen",
+    "Zhenyu Zhou",
+    "Jian-Ping Mei",
+    "Chunhua Shen",
+    "Chun Chen",
+    "Can Wang"
+  ],
+  "venue": "arXiv preprint · 2023",
+  "distinction": "",
+  "arxiv": "https://arxiv.org/abs/2305.19947",
+  "code": "https://github.com/zju-pi/diff-sampler",
+  "tldr": "",
+  "image": "assets/papers/23arXiv-geometric.jpg",
+  "imageAlt": "",
+  "placeholder": "geometry",
+  "abstract": "Recent years have witnessed significant progress in developing effective training and fast sampling techniques for diffusion models. A remarkable advancement is the use of stochastic differential equations (SDEs) and their marginal-preserving ordinary differential equations (ODEs) to describe data perturbation and generative modeling in a unified framework. In this paper, we carefully inspect the ODE-based sampling of a popular variance-exploding SDE and reveal several intriguing structures of its sampling dynamics. We discover that the data distribution and the noise distribution are smoothly connected with a quasi-linear sampling trajectory and another implicit denoising trajectory that even converges faster. Meanwhile, the denoising trajectory governs the curvature of the corresponding sampling trajectory and its finite differences yield various second-order samplers used in practice. Furthermore, we establish a theoretical relationship between the optimal ODE-based sampling and the classic mean-shift (mode-seeking) algorithm, with which we can characterize the asymptotic behavior of diffusion models and identify the empirical score deviation.",
+  "bibtex": "@article{chen2023geometric,\n  title={A geometric perspective on diffusion models},\n  author={Chen, Defang and Zhou, Zhenyu and Mei, Jian-Ping and Shen, Chunhua and Chen, Chun and Wang, Can},\n  journal={arXiv preprint arXiv:2305.19947},\n  year={2023}\n}"
+}

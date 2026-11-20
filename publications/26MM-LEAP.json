@@ -1,0 +1,21 @@
+{
+  "id": "26MM-LEAP",
+  "title": "LEAP: Accelerating ODE-based Diffusion Sampling with Optimal Linear Leaps",
+  "authors": [
+    "Haowei Zheng",
+    "Zhenyu Zhou",
+    "Jiawei Chen",
+    "Can Wang",
+    "Defang Chen"
+  ],
+  "venue": "ACM MM · 2026",
+  "distinction": "",
+  "arxiv": "https://arxiv.org/abs/2610.25918",
+  "code": "https://github.com/zju-pi/LEAP",
+  "tldr": "",
+  "image": "assets/papers/26MM-LEAP.jpg",
+  "imageAlt": "",
+  "placeholder": "leap",
+  "abstract": "Diffusion models primarily rely on general-purpose ODE-based numerical methods for training-free accelerated sampling, but performance degrades with coarse time discretization. In this paper, we propose optimal linear leaps (LEAP), a specialized method grounded in theoretical and empirical investigations of sampling trajectory geometry. Built upon low-dimensionality and cross-trajectory consistency, LEAP formulates a supervised least-squares optimization problem within the local trajectory subspace, achieving a precise approximation of future states without model evaluations. Extensive experiments demonstrate that LEAP outperforms previous methods across diverse modalities, including text-to-image (Stable Diffusion 3.5, FLUX.1-dev) and image-to-3D (TRELLIS.2) generation. Furthermore, LEAP can be seamlessly integrated into existing solver-based methods, offering a plug-and-play enhancement for modern diffusion models.",
+  "bibtex": "@inproceedings{zheng2026leap,\n  title={LEAP: Accelerating ODE-based Diffusion Sampling with Optimal Linear Leaps},\n  author={Zheng, Haowei and Zhou, Zhenyu and Chen, Jiawei and Wang, Can and Chen, Defang},\n  booktitle={Proceedings of the 34th ACM International Conference on Multimedia},\n  pages={15616--15625},\n  year={2026}\n}"
+}

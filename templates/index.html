@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhenyu Zhou — research on diffusion models, efficient sampling, and generative AI.">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta property="og:title" content="Zhenyu Zhou — Researcher">
+  <meta property="og:description" content="Research on diffusion models, efficient sampling, and generative AI.">
+  <title>Zhenyu Zhou</title>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('theme'); } catch (error) { theme = null; }
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="academic.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch color theme">
+        <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="about">
+      <div class="portrait">
+        <img src="assets/photo.jpg" alt="Portrait of Zhenyu Zhou" width="1882" height="2917" fetchpriority="high">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Hello, I’m</p>
+        <h1>Zhenyu Zhou<span class="dot">.</span></h1>
+        <p class="intro">I am a fourth-year Ph.D. student in the College of Computer Science and Technology at Zhejiang University, advised by <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&hl=en">Prof. Can Wang</a>. My research focuses on <strong>diffusion models</strong>, with an emphasis on understanding their geometry and making generation faster, simpler, and more efficient.</p>
+        <!-- <p class="intro secondary">I enjoy turning structural observations into practical algorithms—from few-step ODE sampling to lightweight model distillation.</p> -->
+        <div class="links" aria-label="Profile links">
+          <a class="pill primary" href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ&hl=en" target="_blank" rel="noreferrer"><i class="fa-brands fa-google-scholar" aria-hidden="true"></i>Google Scholar <span>↗</span></a>
+          <a class="pill" href="https://github.com/zhyzhouu" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub <span>↗</span></a>
+          <a class="pill" href="mailto:zhyzhou@zju.edu.cn"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="publications" id="publications">
+      <div class="section-heading">
+        <div><p class="eyebrow">Research</p><h2>Publications</h2></div>
+        <!-- <p class="section-note">A selection of work on the geometry, acceleration, and distillation of diffusion models.</p> -->
+      </div>
+
+      <div class="paper-list">
+{{PUBLICATIONS}}
+      </div>
+    </section>
+  </main>
+
+  <!-- <footer><p>Designed for clarity, built to stay simple.</p><p>© <span id="year">2026</span> Zhenyu Zhou</p></footer> -->
+  <footer><p></p><p>© <span id="year">2026</span> Zhenyu Zhou</p></footer>
+  <dialog class="figure-dialog" aria-label="Paper figure preview">
+    <div class="figure-content">
+      <button class="figure-close" type="button" aria-label="Close figure preview" autofocus>×</button>
+      <img class="figure-large" alt="">
+    </div>
+  </dialog>
+  <script>
+    const figureDialog = document.querySelector('.figure-dialog');
+    const largeFigure = figureDialog.querySelector('img');
+    let figureCloseTimer;
+    const closeFigure = () => {
+      if (!figureDialog.open || figureDialog.classList.contains('is-closing')) return;
+      figureDialog.classList.add('is-closing');
+      const duration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 180;
+      figureCloseTimer = window.setTimeout(() => figureDialog.close(), duration);
+    };
+    document.querySelectorAll('.paper-thumb:not(:disabled)').forEach((button) => {
+      button.addEventListener('click', () => {
+        const image = button.querySelector('img');
+        if (!image) return;
+        largeFigure.src = image.currentSrc || image.src;
+        largeFigure.alt = image.alt;
+        figureDialog.showModal();
+        document.documentElement.classList.add('figure-open');
+      });
+    });
+    figureDialog.querySelector('.figure-close').addEventListener('click', closeFigure);
+    figureDialog.addEventListener('cancel', (event) => {
+      event.preventDefault();
+      closeFigure();
+    });
+    figureDialog.addEventListener('click', (event) => {
+      if (event.target === figureDialog) closeFigure();
+    });
+    figureDialog.addEventListener('close', () => {
+      window.clearTimeout(figureCloseTimer);
+      figureDialog.classList.remove('is-closing');
+      document.documentElement.classList.remove('figure-open');
+      largeFigure.removeAttribute('src');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const themeButton = document.querySelector('.theme-toggle');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+
+    const updateThemeControl = () => {
+      const isDark = document.documentElement.dataset.theme === 'dark';
+      themeButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      themeButton.setAttribute('aria-pressed', String(isDark));
+      themeColor.setAttribute('content', isDark ? '#111817' : '#f6f4ef');
+    };
+
+    updateThemeControl();
+    themeButton.addEventListener('click', () => {
+      const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = nextTheme;
+      document.documentElement.style.colorScheme = nextTheme;
+      try { localStorage.setItem('theme', nextTheme); } catch (error) { /* Preference remains active for this page. */ }
+      updateThemeControl();
+    });
+
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    systemTheme.addEventListener('change', (event) => {
+      let savedTheme;
+      try { savedTheme = localStorage.getItem('theme'); } catch (error) { savedTheme = null; }
+      if (savedTheme !== 'light' && savedTheme !== 'dark') {
+        const nextTheme = event.matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = nextTheme;
+        document.documentElement.style.colorScheme = nextTheme;
+        updateThemeControl();
+      }
+    });
+
+    document.querySelectorAll('.panel-toggle').forEach((button) => {
+      button.addEventListener('click', () => {
+        const paper = button.closest('.paper');
+        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        const wasOpen = button.getAttribute('aria-expanded') === 'true';
+
+        paper.querySelectorAll('.paper-panel').forEach((item) => { item.hidden = true; });
+        paper.querySelectorAll('.panel-toggle').forEach((item) => {
+          item.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!wasOpen) {
+          panel.hidden = false;
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

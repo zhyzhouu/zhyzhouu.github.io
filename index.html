@@ -63,42 +63,71 @@
       </div>
 
       <div class="paper-list">
-        <article class="paper" data-tldr="A geometry-aware time schedule improves training-free, few-step text-to-image sampling.">
-          <a class="paper-thumb thumb-tors" href="https://arxiv.org/abs/2603.00763" target="_blank" rel="noreferrer" aria-label="Open TORS paper"><span class="thumb-label">TORS</span><i></i><i></i><i></i></a>
+        <article class="paper">
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: LEAP: Accelerating ODE-based Diffusion Sampling with Optimal Linear Leaps" aria-haspopup="dialog"><img src="assets/papers/26MM-LEAP.jpg" alt="LEAP: Accelerating ODE-based Diffusion Sampling with Optimal Linear Leaps" loading="lazy"></button>
           <div class="paper-body">
-            <div class="paper-meta"><span class="venue">ECCV 2026</span></div>
+            <div class="paper-meta"><span class="venue">ACM MM · 2026</span></div>
+            <h3><a href="https://arxiv.org/abs/2610.25918" target="_blank" rel="noreferrer">LEAP: Accelerating ODE-based Diffusion Sampling with Optimal Linear Leaps</a></h3>
+            <p class="authors">Haowei Zheng, <a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, Jiawei Chen, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a>, <a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a></p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-26MM-LEAP">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-26MM-LEAP">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2610.25918" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/LEAP" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-26MM-LEAP" hidden><p>Diffusion models primarily rely on general-purpose ODE-based numerical methods for training-free accelerated sampling, but performance degrades with coarse time discretization. In this paper, we propose optimal linear leaps (LEAP), a specialized method grounded in theoretical and empirical investigations of sampling trajectory geometry. Built upon low-dimensionality and cross-trajectory consistency, LEAP formulates a supervised least-squares optimization problem within the local trajectory subspace, achieving a precise approximation of future states without model evaluations. Extensive experiments demonstrate that LEAP outperforms previous methods across diverse modalities, including text-to-image (Stable Diffusion 3.5, FLUX.1-dev) and image-to-3D (TRELLIS.2) generation. Furthermore, LEAP can be seamlessly integrated into existing solver-based methods, offering a plug-and-play enhancement for modern diffusion models.</p></div><div class="paper-panel bib-panel" id="bib-26MM-LEAP" hidden><pre><code>@inproceedings{zheng2026leap,
+  title={LEAP: Accelerating ODE-based Diffusion Sampling with Optimal Linear Leaps},
+  author={Zheng, Haowei and Zhou, Zhenyu and Chen, Jiawei and Wang, Can and Chen, Defang},
+  booktitle={Proceedings of the 34th ACM International Conference on Multimedia},
+  pages={15616--15625},
+  year={2026}
+}</code></pre></div>
+        </article>
+
+        <article class="paper">
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: Analyzing and Improving Fast Sampling of Text-to-Image Diffusion Models" aria-haspopup="dialog"><img src="assets/papers/26ECCV-TORS.jpg" alt="Analyzing and Improving Fast Sampling of Text-to-Image Diffusion Models" loading="lazy"></button>
+          <div class="paper-body">
+            <div class="paper-meta"><span class="venue">ECCV · 2026</span></div>
             <h3><a href="https://arxiv.org/abs/2603.00763" target="_blank" rel="noreferrer">Analyzing and Improving Fast Sampling of Text-to-Image Diffusion Models</a></h3>
-            <p class="authors"><strong>Zhenyu Zhou</strong>, Defang Chen, Siwei Lyu, Chun Chen, Can Wang</p>
-            <div class="paper-links">
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-tors">Abs</button>
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-tors">Bib</button>
-              <a class="paper-action" href="https://arxiv.org/abs/2603.00763" target="_blank" rel="noreferrer">arXiv ↗</a>
-              <a class="paper-action" href="https://github.com/zju-pi/TORS" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-            <div class="paper-panel" id="abs-tors" hidden><p>Text-to-image diffusion models have achieved unprecedented success but still struggle to produce high-quality results under limited sampling budgets. Existing training-free sampling acceleration methods are typically developed independently, leaving the overall performance and compatibility among these methods unexplored. In this paper, we bridge this gap by systematically elucidating the design space, and our comprehensive experiments identify the sampling time schedule as the most pivotal factor. Inspired by the geometric properties of diffusion models revealed through the Frenet-Serret formulas, we propose constant total rotation schedule (TORS), a scheduling strategy that ensures uniform geometric variation along the sampling trajectory. TORS outperforms previous training-free acceleration methods and produces high-quality images with 10 sampling steps on Flux.1-Dev and Stable Diffusion 3.5. Extensive experiments underscore the adaptability of our method to unseen models, hyperparameters, and downstream applications.</p></div>
-            <div class="paper-panel bib-panel" id="bib-tors" hidden><pre><code>@article{zhou2026analyzing,
+            <p class="authors"><a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, <a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a>, <a href="https://scholar.google.com/citations?user=wefAEM4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Siwei Lyu</a>, Chun Chen, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a></p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-26ECCV-TORS">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-26ECCV-TORS">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2603.00763" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/TORS" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-26ECCV-TORS" hidden><p>Text-to-image diffusion models have achieved unprecedented success but still struggle to produce high-quality results under limited sampling budgets. Existing training-free sampling acceleration methods are typically developed independently, leaving the overall performance and compatibility among these methods unexplored. In this paper, we bridge this gap by systematically elucidating the design space, and our comprehensive experiments identify the sampling time schedule as the most pivotal factor. Inspired by the geometric properties of diffusion models revealed through the Frenet-Serret formulas, we propose constant total rotation schedule (TORS), a scheduling strategy that ensures uniform geometric variation along the sampling trajectory. TORS outperforms previous training-free acceleration methods and produces high-quality images with 10 sampling steps on Flux.1-Dev and Stable Diffusion 3.5. Extensive experiments underscore the adaptability of our method to unseen models, hyperparameters, and downstream applications.</p></div><div class="paper-panel bib-panel" id="bib-26ECCV-TORS" hidden><pre><code>@article{zhou2026analyzing,
   title={Analyzing and Improving Fast Sampling of Text-to-Image Diffusion Models},
   author={Zhou, Zhenyu and Chen, Defang and Lyu, Siwei and Chen, Chun and Wang, Can},
   journal={arXiv preprint arXiv:2603.00763},
   year={2026}
 }</code></pre></div>
-          </div>
         </article>
 
         <article class="paper">
-          <a class="paper-thumb thumb-regularity" href="https://arxiv.org/abs/2506.10177" target="_blank" rel="noreferrer" aria-label="Open geometric regularity paper"><span class="thumb-label">GITS</span><span class="boomerang b1"></span><span class="boomerang b2"></span><span class="boomerang b3"></span></a>
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: DICE: Distilling Classifier-Free Guidance into Text Embeddings" aria-haspopup="dialog"><img src="assets/papers/26AAAI-DICE.jpg" alt="DICE: Distilling Classifier-Free Guidance into Text Embeddings" loading="lazy"></button>
           <div class="paper-body">
-            <div class="paper-meta"><span class="venue">J. Stat. Mech. 2025</span></div>
+            <div class="paper-meta"><span class="venue">AAAI · 2026</span><span class="distinction">Oral</span></div>
+            <h3><a href="https://arxiv.org/abs/2502.03726" target="_blank" rel="noreferrer">DICE: Distilling Classifier-Free Guidance into Text Embeddings</a></h3>
+            <p class="authors"><a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, <a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a>, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a>, Chun Chen, <a href="https://scholar.google.com/citations?user=wefAEM4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Siwei Lyu</a></p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-26AAAI-DICE">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-26AAAI-DICE">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2502.03726" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/dice" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-26AAAI-DICE" hidden><p>Text-to-image diffusion models are capable of generating high-quality images, but suboptimal pre-trained text representations often result in these images failing to align closely with the given text prompts. Classifier-free guidance (CFG) is a popular and effective technique for improving text-image alignment in the generative process. However, CFG introduces significant computational overhead. In this paper, we present DIstilling CFG by sharpening text Embeddings (DICE) that replaces CFG in the sampling process with half the computational complexity while maintaining similar generation quality. DICE distills a CFG-based text-to-image diffusion model into a CFG-free version by refining text embeddings to replicate CFG-based directions. In this way, we avoid the computational drawbacks of CFG, enabling high-quality, well-aligned image generation at a fast sampling speed. Furthermore, examining the enhancement pattern, we identify the underlying mechanism of DICE that sharpens specific components of text embeddings to preserve semantic information while enhancing fine-grained details. Extensive experiments on multiple Stable Diffusion v1.5 variants, SDXL, and PixArt-α demonstrate the effectiveness of our method.</p></div><div class="paper-panel bib-panel" id="bib-26AAAI-DICE" hidden><pre><code>@inproceedings{zhou2026dice,
+  title={DICE: Distilling classifier-free guidance into text embeddings},
+  author={Zhou, Zhenyu and Chen, Defang and Wang, Can and Chen, Chun and Lyu, Siwei},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={16},
+  pages={13880--13888},
+  year={2026}
+}</code></pre></div>
+        </article>
+
+        <article class="paper">
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: Geometric Regularity in Deterministic Sampling Dynamics of Diffusion-based Generative Models" aria-haspopup="dialog"><img src="assets/papers/25JSTAT-regularity.jpg" alt="Geometric Regularity in Deterministic Sampling Dynamics of Diffusion-based Generative Models" loading="lazy"></button>
+          <div class="paper-body">
+            <div class="paper-meta"><span class="venue">J. Stat. Mech. · 2025</span></div>
             <h3><a href="https://arxiv.org/abs/2506.10177" target="_blank" rel="noreferrer">Geometric Regularity in Deterministic Sampling Dynamics of Diffusion-based Generative Models</a></h3>
-            <p class="authors">Defang Chen, <strong>Zhenyu Zhou</strong>, Can Wang, Siwei Lyu</p>
-            <div class="paper-links">
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-regularity">Abs</button>
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-regularity">Bib</button>
-              <a class="paper-action" href="https://arxiv.org/abs/2506.10177" target="_blank" rel="noreferrer">arXiv ↗</a>
-              <a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-            <div class="paper-panel" id="abs-regularity" hidden><p>Diffusion-based generative models employ stochastic differential equations (SDEs) and their equivalent probability flow ordinary differential equations (ODEs) to establish a smooth transformation between complex high-dimensional data distributions and tractable prior distributions. In this paper, we reveal a striking geometric regularity in the deterministic sampling dynamics of diffusion generative models: each simulated sampling trajectory along the gradient field lies within an extremely low-dimensional subspace, and all trajectories exhibit an almost identical boomerang shape, regardless of the model architecture, applied conditions, or generated content. We characterize several intriguing properties of these trajectories, particularly under closed-form solutions based on kernel-estimated data modeling. We also demonstrate a practical application of the discovered trajectory regularity by proposing a dynamic programming-based scheme to better align the sampling time schedule with the underlying trajectory structure. This simple strategy requires minimal modification to existing deterministic numerical solvers, incurs negligible computational overhead, and achieves superior image generation performance, especially in regions with only 5 - 10 function evaluations.</p></div>
-            <div class="paper-panel bib-panel" id="bib-regularity" hidden><pre><code>@article{chen2025geometric,
+            <p class="authors"><a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a>, <a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a>, <a href="https://scholar.google.com/citations?user=wefAEM4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Siwei Lyu</a></p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-25JSTAT-regularity">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-25JSTAT-regularity">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2506.10177" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-25JSTAT-regularity" hidden><p>Diffusion-based generative models employ stochastic differential equations (SDEs) and their equivalent probability flow ordinary differential equations (ODEs) to establish a smooth transformation between complex high-dimensional data distributions and tractable prior distributions. In this paper, we reveal a striking geometric regularity in the deterministic sampling dynamics of diffusion generative models: each simulated sampling trajectory along the gradient field lies within an extremely low-dimensional subspace, and all trajectories exhibit an almost identical boomerang shape, regardless of the model architecture, applied conditions, or generated content. We characterize several intriguing properties of these trajectories, particularly under closed-form solutions based on kernel-estimated data modeling. We also demonstrate a practical application of the discovered trajectory regularity by proposing a dynamic programming-based scheme to better align the sampling time schedule with the underlying trajectory structure. This simple strategy requires minimal modification to existing deterministic numerical solvers, incurs negligible computational overhead, and achieves superior image generation performance, especially in regions with only 5 - 10 function evaluations.</p></div><div class="paper-panel bib-panel" id="bib-25JSTAT-regularity" hidden><pre><code>@article{chen2025geometric,
   title={Geometric regularity in deterministic sampling dynamics of diffusion-based generative models},
   author={Chen, Defang and Zhou, Zhenyu and Wang, Can and Lyu, Siwei},
   journal={Journal of Statistical Mechanics: Theory and Experiment},
@@ -108,48 +137,18 @@
   year={2025},
   publisher={IOP Publishing}
 }</code></pre></div>
-          </div>
         </article>
 
         <article class="paper">
-          <a class="paper-thumb thumb-dice" href="https://arxiv.org/abs/2502.03726" target="_blank" rel="noreferrer" aria-label="Open DICE paper"><span class="thumb-label">DICE</span><span class="orb one"></span><span class="orb two"></span></a>
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: Simple and Fast Distillation of Diffusion Models" aria-haspopup="dialog"><img src="assets/papers/24NeurIPS-SFD.jpg" alt="Simple and Fast Distillation of Diffusion Models" loading="lazy"></button>
           <div class="paper-body">
-            <div class="paper-meta"><span class="venue">AAAI 2026</span><span class="distinction">Oral</span></div>
-            <h3><a href="https://arxiv.org/abs/2502.03726" target="_blank" rel="noreferrer">DICE: Distilling Classifier-Free Guidance into Text Embeddings</a></h3>
-            <p class="authors"><strong>Zhenyu Zhou</strong>, Defang Chen, Can Wang, Chun Chen, Siwei Lyu</p>
-            <div class="paper-links">
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-dice">Abs</button>
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-dice">Bib</button>
-              <a class="paper-action" href="https://arxiv.org/abs/2502.03726" target="_blank" rel="noreferrer">arXiv ↗</a>
-              <a class="paper-action" href="https://github.com/zju-pi/dice" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-            <div class="paper-panel" id="abs-dice" hidden><p>Text-to-image diffusion models are capable of generating high-quality images, but suboptimal pre-trained text representations often result in these images failing to align closely with the given text prompts. Classifier-free guidance (CFG) is a popular and effective technique for improving text-image alignment in the generative process. However, CFG introduces significant computational overhead. In this paper, we present DIstilling CFG by sharpening text Embeddings (DICE) that replaces CFG in the sampling process with half the computational complexity while maintaining similar generation quality. DICE distills a CFG-based text-to-image diffusion model into a CFG-free version by refining text embeddings to replicate CFG-based directions. In this way, we avoid the computational drawbacks of CFG, enabling high-quality, well-aligned image generation at a fast sampling speed. Furthermore, examining the enhancement pattern, we identify the underlying mechanism of DICE that sharpens specific components of text embeddings to preserve semantic information while enhancing fine-grained details. Extensive experiments on multiple Stable Diffusion v1.5 variants, SDXL, and PixArt-α demonstrate the effectiveness of our method.</p></div>
-            <div class="paper-panel bib-panel" id="bib-dice" hidden><pre><code>@inproceedings{zhou2026dice,
-  title={DICE: Distilling classifier-free guidance into text embeddings},
-  author={Zhou, Zhenyu and Chen, Defang and Wang, Can and Chen, Chun and Lyu, Siwei},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={40},
-  number={16},
-  pages={13880--13888},
-  year={2026}
-}</code></pre></div>
-          </div>
-        </article>
-
-        <article class="paper">
-          <a class="paper-thumb thumb-sfd" href="https://arxiv.org/abs/2409.19681" target="_blank" rel="noreferrer" aria-label="Open SFD paper"><span class="thumb-label">SFD</span><span class="steps"><b></b><b></b><b></b><b></b></span></a>
-          <div class="paper-body">
-            <div class="paper-meta"><span class="venue">NeurIPS 2024</span></div>
+            <div class="paper-meta"><span class="venue">NeurIPS · 2024</span></div>
             <h3><a href="https://arxiv.org/abs/2409.19681" target="_blank" rel="noreferrer">Simple and Fast Distillation of Diffusion Models</a></h3>
-            <p class="authors"><strong>Zhenyu Zhou</strong>, Defang Chen, Can Wang, Chun Chen, Siwei Lyu</p>
-            <div class="paper-links">
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-sfd">Abs</button>
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-sfd">Bib</button>
-              <a class="paper-action" href="https://arxiv.org/abs/2409.19681" target="_blank" rel="noreferrer">arXiv ↗</a>
-              <a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-            <div class="paper-panel" id="abs-sfd" hidden><p>Diffusion-based generative models have demonstrated their powerful performance across various tasks, but this comes at a cost of the slow sampling speed. To achieve both efficient and high-quality synthesis, various distillation-based accelerated sampling methods have been developed recently. However, they generally require time-consuming fine tuning with elaborate designs to achieve satisfactory performance in a specific number of function evaluation (NFE), making them difficult to employ in practice. To address this issue, we propose Simple and Fast Distillation (SFD) of diffusion models, which simplifies the paradigm used in existing methods and largely shortens their fine-tuning time up to 1000×. We begin with a vanilla distillation-based sampling method and boost its performance to state of the art by identifying and addressing several small yet vital factors affecting the synthesis efficiency and quality. Our method can also achieve sampling with variable NFEs using a single distilled model. Extensive experiments demonstrate that SFD strikes a good balance between the sample quality and fine-tuning costs in few-step image generation task. For example, SFD achieves 4.53 FID (NFE=2) on CIFAR-10 with only 0.64 hours of fine-tuning on a single NVIDIA A100 GPU.</p></div>
-            <div class="paper-panel bib-panel" id="bib-sfd" hidden><pre><code>@article{zhou2024simple,
+            <p class="authors"><a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, <a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a>, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a>, Chun Chen, <a href="https://scholar.google.com/citations?user=wefAEM4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Siwei Lyu</a></p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-24NeurIPS-SFD">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-24NeurIPS-SFD">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2409.19681" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-24NeurIPS-SFD" hidden><p>Diffusion-based generative models have demonstrated their powerful performance across various tasks, but this comes at a cost of the slow sampling speed. To achieve both efficient and high-quality synthesis, various distillation-based accelerated sampling methods have been developed recently. However, they generally require time-consuming fine tuning with elaborate designs to achieve satisfactory performance in a specific number of function evaluation (NFE), making them difficult to employ in practice. To address this issue, we propose Simple and Fast Distillation (SFD) of diffusion models, which simplifies the paradigm used in existing methods and largely shortens their fine-tuning time up to 1000×. We begin with a vanilla distillation-based sampling method and boost its performance to state of the art by identifying and addressing several small yet vital factors affecting the synthesis efficiency and quality. Our method can also achieve sampling with variable NFEs using a single distilled model. Extensive experiments demonstrate that SFD strikes a good balance between the sample quality and fine-tuning costs in few-step image generation task. For example, SFD achieves 4.53 FID (NFE=2) on CIFAR-10 with only 0.64 hours of fine-tuning on a single NVIDIA A100 GPU.</p></div><div class="paper-panel bib-panel" id="bib-24NeurIPS-SFD" hidden><pre><code>@article{zhou2024simple,
   title={Simple and fast distillation of diffusion models},
   author={Zhou, Zhenyu and Chen, Defang and Wang, Can and Chen, Chun and Lyu, Siwei},
   journal={Advances in Neural Information Processing Systems},
@@ -157,23 +156,36 @@
   pages={40831--40860},
   year={2024}
 }</code></pre></div>
-          </div>
         </article>
 
         <article class="paper">
-          <a class="paper-thumb thumb-amed" href="https://arxiv.org/abs/2312.00094" target="_blank" rel="noreferrer" aria-label="Open AMED-Solver paper"><span class="thumb-label">AMED</span><span class="trajectory"></span><span class="point p1"></span><span class="point p2"></span></a>
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: On the Trajectory Regularity of ODE-based Diffusion Sampling" aria-haspopup="dialog"><img src="assets/papers/24ICML-GITS.jpg" alt="On the Trajectory Regularity of ODE-based Diffusion Sampling" loading="lazy"></button>
           <div class="paper-body">
-            <div class="paper-meta"><span class="venue">CVPR 2024</span><span class="distinction">Highlight</span></div>
+            <div class="paper-meta"><span class="venue">ICML · 2024</span></div>
+            <h3><a href="https://arxiv.org/abs/2405.11326" target="_blank" rel="noreferrer">On the Trajectory Regularity of ODE-based Diffusion Sampling</a></h3>
+            <p class="authors"><a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a>, <a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a>, <a href="https://scholar.google.com/citations?user=Ljk2BvIAAAAJ" target="_blank" rel="noreferrer">Chunhua Shen</a>, <a href="https://scholar.google.com/citations?user=wefAEM4AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Siwei Lyu</a></p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-24ICML-GITS">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-24ICML-GITS">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2405.11326" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-24ICML-GITS" hidden><p>Diffusion-based generative models use stochastic differential equations (SDEs) and their equivalent ordinary differential equations (ODEs) to establish a smooth connection between a complex data distribution and a tractable prior distribution. In this paper, we identify several intriguing trajectory properties in the ODE-based sampling process of diffusion models. We characterize an implicit denoising trajectory and discuss its vital role in forming the coupled sampling trajectory with a strong shape regularity, regardless of the generated content. We also describe a dynamic programming-based scheme to make the time schedule in sampling better fit the underlying trajectory structure. This simple strategy requires minimal modification to any given ODE-based numerical solvers and incurs negligible computational cost, while delivering superior performance in image generation, especially in 5∼10 function evaluations.</p></div><div class="paper-panel bib-panel" id="bib-24ICML-GITS" hidden><pre><code>@inproceedings{chen2024trajectory,
+  title = {On the Trajectory Regularity of ODE-based Diffusion Sampling},
+  author = {Chen, Defang and Zhou, Zhenyu and Wang, Can and Shen, Chunhua and Lyu, Siwei},
+  booktitle = {International Conference on Machine Learning},
+  pages = {7905--7934},
+  year = {2024},
+}</code></pre></div>
+        </article>
+
+        <article class="paper">
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: Fast ODE-based Sampling for Diffusion Models in Around 5 Steps" aria-haspopup="dialog"><img src="assets/papers/24CVPR-AMED.jpg" alt="Fast ODE-based Sampling for Diffusion Models in Around 5 Steps" loading="lazy"></button>
+          <div class="paper-body">
+            <div class="paper-meta"><span class="venue">CVPR · 2024</span><span class="distinction">Highlight</span></div>
             <h3><a href="https://arxiv.org/abs/2312.00094" target="_blank" rel="noreferrer">Fast ODE-based Sampling for Diffusion Models in Around 5 Steps</a></h3>
-            <p class="authors"><strong>Zhenyu Zhou</strong>, Defang Chen, Can Wang, Chun Chen</p>
-            <div class="paper-links">
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-amed">Abs</button>
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-amed">Bib</button>
-              <a class="paper-action" href="https://arxiv.org/abs/2312.00094" target="_blank" rel="noreferrer">arXiv ↗</a>
-              <a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-            <div class="paper-panel" id="abs-amed" hidden><p>Sampling from diffusion models can be treated as solving the corresponding ordinary differential equations (ODEs), with the aim of obtaining an accurate solution with as few number of function evaluations (NFE) as possible. Recently, various fast samplers utilizing higher-order ODE solvers have emerged and achieved better performance than the initial first-order one. However, these numerical methods inherently result in certain approximation errors, which significantly degrades sample quality with extremely small NFE (e.g., around 5). In contrast, based on the geometric observation that each sampling trajectory almost lies in a two-dimensional subspace embedded in the ambient space, we propose Approximate MEan-Direction Solver (AMED-Solver) that eliminates truncation errors by directly learning the mean direction for fast diffusion sampling. Besides, our method can be easily used as a plugin to further improve existing ODE-based samplers. Extensive experiments on image synthesis with the resolution ranging from 32 to 512 demonstrate the effectiveness of our method. With only 5 NFE, we achieve 6.61 FID on CIFAR-10, 10.74 FID on ImageNet 64×64, and 13.20 FID on LSUN Bedroom.</p></div>
-            <div class="paper-panel bib-panel" id="bib-amed" hidden><pre><code>@inproceedings{zhou2024fast,
+            <p class="authors"><a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, <a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a>, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a>, Chun Chen</p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-24CVPR-AMED">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-24CVPR-AMED">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2312.00094" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-24CVPR-AMED" hidden><p>Sampling from diffusion models can be treated as solving the corresponding ordinary differential equations (ODEs), with the aim of obtaining an accurate solution with as few number of function evaluations (NFE) as possible. Recently, various fast samplers utilizing higher-order ODE solvers have emerged and achieved better performance than the initial first-order one. However, these numerical methods inherently result in certain approximation errors, which significantly degrades sample quality with extremely small NFE (e.g., around 5). In contrast, based on the geometric observation that each sampling trajectory almost lies in a two-dimensional subspace embedded in the ambient space, we propose Approximate MEan-Direction Solver (AMED-Solver) that eliminates truncation errors by directly learning the mean direction for fast diffusion sampling. Besides, our method can be easily used as a plugin to further improve existing ODE-based samplers. Extensive experiments on image synthesis with the resolution ranging from 32 to 512 demonstrate the effectiveness of our method. With only 5 NFE, we achieve 6.61 FID on CIFAR-10, 10.74 FID on ImageNet 64×64, and 13.20 FID on LSUN Bedroom.</p></div><div class="paper-panel bib-panel" id="bib-24CVPR-AMED" hidden><pre><code>@inproceedings{zhou2024fast,
   title={Fast ode-based sampling for diffusion models in around 5 steps},
   author={Zhou, Zhenyu and Chen, Defang and Wang, Can and Chen, Chun},
   booktitle={2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
@@ -181,52 +193,23 @@
   year={2024},
   organization={IEEE}
 }</code></pre></div>
-          </div>
         </article>
 
         <article class="paper">
-          <a class="paper-thumb thumb-trajectory" href="https://arxiv.org/abs/2405.11326" target="_blank" rel="noreferrer" aria-label="Open trajectory regularity paper on arXiv"><span class="thumb-label">GITS</span><span class="loop l1"></span><span class="loop l2"></span></a>
+          <button class="paper-thumb " type="button" aria-label="Enlarge figure: A Geometric Perspective on Diffusion Models" aria-haspopup="dialog"><img src="assets/papers/23arXiv-geometric.jpg" alt="A Geometric Perspective on Diffusion Models" loading="lazy"></button>
           <div class="paper-body">
-            <div class="paper-meta"><span class="venue">ICML 2024</span></div>
-            <h3><a href="https://arxiv.org/abs/2405.11326" target="_blank" rel="noreferrer">On the Trajectory Regularity of ODE-based Diffusion Sampling</a></h3>
-            <p class="authors">Defang Chen, <strong>Zhenyu Zhou</strong>, Can Wang, Chunhua Shen, Siwei Lyu</p>
-            <div class="paper-links">
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-trajectory">Abs</button>
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-trajectory">Bib</button>
-              <a class="paper-action" href="https://arxiv.org/abs/2405.11326" target="_blank" rel="noreferrer">arXiv ↗</a>
-              <a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-            <div class="paper-panel" id="abs-trajectory" hidden><p>Diffusion-based generative models use stochastic differential equations (SDEs) and their equivalent ordinary differential equations (ODEs) to establish a smooth connection between a complex data distribution and a tractable prior distribution. In this paper, we identify several intriguing trajectory properties in the ODE-based sampling process of diffusion models. We characterize an implicit denoising trajectory and discuss its vital role in forming the coupled sampling trajectory with a strong shape regularity, regardless of the generated content. We also describe a dynamic programming-based scheme to make the time schedule in sampling better fit the underlying trajectory structure. This simple strategy requires minimal modification to any given ODE-based numerical solvers and incurs negligible computational cost, while delivering superior performance in image generation, especially in 5∼10 function evaluations.</p></div>
-            <div class="paper-panel bib-panel" id="bib-trajectory" hidden><pre><code>@inproceedings{chen2024trajectory,
-  title = {On the Trajectory Regularity of ODE-based Diffusion Sampling},
-  author = {Chen, Defang and Zhou, Zhenyu and Wang, Can and Shen, Chunhua and Lyu, Siwei},
-  booktitle = {International Conference on Machine Learning},
-  pages = {7905--7934},
-  year = {2024},
-}</code></pre></div>
-          </div>
-        </article>
-
-        <article class="paper">
-          <a class="paper-thumb thumb-geometry" href="https://arxiv.org/abs/2305.19947" target="_blank" rel="noreferrer" aria-label="Open geometric perspective paper"><span class="thumb-label">GEOMETRY</span><span class="axis x"></span><span class="axis y"></span><span class="curve"></span></a>
-          <div class="paper-body">
-            <div class="paper-meta"><span class="venue">arXiv 2023</span></div>
+            <div class="paper-meta"><span class="venue">arXiv preprint · 2023</span></div>
             <h3><a href="https://arxiv.org/abs/2305.19947" target="_blank" rel="noreferrer">A Geometric Perspective on Diffusion Models</a></h3>
-            <p class="authors">Defang Chen, <strong>Zhenyu Zhou</strong>, Jian-Ping Mei, Chunhua Shen, Chun Chen, Can Wang</p>
-            <div class="paper-links">
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-geometry">Abs</button>
-              <button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-geometry">Bib</button>
-              <a class="paper-action" href="https://arxiv.org/abs/2305.19947" target="_blank" rel="noreferrer">arXiv ↗</a>
-              <a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code ↗</a>
-            </div>
-            <div class="paper-panel" id="abs-geometry" hidden><p>Recent years have witnessed significant progress in developing effective training and fast sampling techniques for diffusion models. A remarkable advancement is the use of stochastic differential equations (SDEs) and their marginal-preserving ordinary differential equations (ODEs) to describe data perturbation and generative modeling in a unified framework. In this paper, we carefully inspect the ODE-based sampling of a popular variance-exploding SDE and reveal several intriguing structures of its sampling dynamics. We discover that the data distribution and the noise distribution are smoothly connected with a quasi-linear sampling trajectory and another implicit denoising trajectory that even converges faster. Meanwhile, the denoising trajectory governs the curvature of the corresponding sampling trajectory and its finite differences yield various second-order samplers used in practice. Furthermore, we establish a theoretical relationship between the optimal ODE-based sampling and the classic mean-shift (mode-seeking) algorithm, with which we can characterize the asymptotic behavior of diffusion models and identify the empirical score deviation.</p></div>
-            <div class="paper-panel bib-panel" id="bib-geometry" hidden><pre><code>@article{chen2023geometric,
+            <p class="authors"><a href="https://scholar.google.com/citations?user=F5P_8NkAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Defang Chen</a>, <a href="https://scholar.google.com/citations?user=PR0YPk4AAAAJ" target="_blank" rel="noreferrer"><strong>Zhenyu Zhou</strong></a>, Jian-Ping Mei, <a href="https://scholar.google.com/citations?user=Ljk2BvIAAAAJ" target="_blank" rel="noreferrer">Chunhua Shen</a>, Chun Chen, <a href="https://scholar.google.com/citations?user=C63q3HoAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Can Wang</a></p>
+
+            <div class="paper-links"><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="abs-23arXiv-geometric">Abs</button><button class="paper-action panel-toggle" type="button" aria-expanded="false" aria-controls="bib-23arXiv-geometric">Bib</button><a class="paper-action" href="https://arxiv.org/abs/2305.19947" target="_blank" rel="noreferrer">arXiv</a><a class="paper-action" href="https://github.com/zju-pi/diff-sampler" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div class="paper-panel" id="abs-23arXiv-geometric" hidden><p>Recent years have witnessed significant progress in developing effective training and fast sampling techniques for diffusion models. A remarkable advancement is the use of stochastic differential equations (SDEs) and their marginal-preserving ordinary differential equations (ODEs) to describe data perturbation and generative modeling in a unified framework. In this paper, we carefully inspect the ODE-based sampling of a popular variance-exploding SDE and reveal several intriguing structures of its sampling dynamics. We discover that the data distribution and the noise distribution are smoothly connected with a quasi-linear sampling trajectory and another implicit denoising trajectory that even converges faster. Meanwhile, the denoising trajectory governs the curvature of the corresponding sampling trajectory and its finite differences yield various second-order samplers used in practice. Furthermore, we establish a theoretical relationship between the optimal ODE-based sampling and the classic mean-shift (mode-seeking) algorithm, with which we can characterize the asymptotic behavior of diffusion models and identify the empirical score deviation.</p></div><div class="paper-panel bib-panel" id="bib-23arXiv-geometric" hidden><pre><code>@article{chen2023geometric,
   title={A geometric perspective on diffusion models},
   author={Chen, Defang and Zhou, Zhenyu and Mei, Jian-Ping and Shen, Chunhua and Chen, Chun and Wang, Can},
   journal={arXiv preprint arXiv:2305.19947},
   year={2023}
 }</code></pre></div>
-          </div>
         </article>
       </div>
     </section>
@@ -234,7 +217,46 @@
 
   <!-- <footer><p>Designed for clarity, built to stay simple.</p><p>© <span id="year">2026</span> Zhenyu Zhou</p></footer> -->
   <footer><p></p><p>© <span id="year">2026</span> Zhenyu Zhou</p></footer>
+  <dialog class="figure-dialog" aria-label="Paper figure preview">
+    <div class="figure-content">
+      <button class="figure-close" type="button" aria-label="Close figure preview" autofocus>×</button>
+      <img class="figure-large" alt="">
+    </div>
+  </dialog>
   <script>
+    const figureDialog = document.querySelector('.figure-dialog');
+    const largeFigure = figureDialog.querySelector('img');
+    let figureCloseTimer;
+    const closeFigure = () => {
+      if (!figureDialog.open || figureDialog.classList.contains('is-closing')) return;
+      figureDialog.classList.add('is-closing');
+      const duration = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 180;
+      figureCloseTimer = window.setTimeout(() => figureDialog.close(), duration);
+    };
+    document.querySelectorAll('.paper-thumb:not(:disabled)').forEach((button) => {
+      button.addEventListener('click', () => {
+        const image = button.querySelector('img');
+        if (!image) return;
+        largeFigure.src = image.currentSrc || image.src;
+        largeFigure.alt = image.alt;
+        figureDialog.showModal();
+        document.documentElement.classList.add('figure-open');
+      });
+    });
+    figureDialog.querySelector('.figure-close').addEventListener('click', closeFigure);
+    figureDialog.addEventListener('cancel', (event) => {
+      event.preventDefault();
+      closeFigure();
+    });
+    figureDialog.addEventListener('click', (event) => {
+      if (event.target === figureDialog) closeFigure();
+    });
+    figureDialog.addEventListener('close', () => {
+      window.clearTimeout(figureCloseTimer);
+      figureDialog.classList.remove('is-closing');
+      document.documentElement.classList.remove('figure-open');
+      largeFigure.removeAttribute('src');
+    });
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const themeButton = document.querySelector('.theme-toggle');
@@ -265,21 +287,6 @@
         document.documentElement.dataset.theme = nextTheme;
         document.documentElement.style.colorScheme = nextTheme;
         updateThemeControl();
-      }
-    });
-
-    // Optional: add data-tldr="One-sentence takeaway" to any paper article.
-    document.querySelectorAll('.paper').forEach((paper) => {
-      const body = paper.querySelector('.paper-body');
-      paper.querySelectorAll('.paper-panel').forEach((panel) => paper.append(panel));
-      const takeaway = paper.dataset.tldr?.trim();
-      if (takeaway) {
-        const note = document.createElement('p');
-        note.className = 'paper-tldr';
-        const label = document.createElement('strong');
-        label.textContent = 'TL;DR';
-        note.append(label, document.createTextNode(takeaway));
-        body.querySelector('.authors').after(note);
       }
     });
 
